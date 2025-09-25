@@ -11,7 +11,13 @@
     "server": "cd server && npm run dev",
     "telegram": "cd telegram-bot && npm run dev",
     "dev:all": "concurrently \"npm run dev\" \"npm run server\" \"npm run telegram\"",
-    "install:all": "npm install && cd server && npm install && cd ../telegram-bot && npm install"
+    "install:all": "npm install && cd server && npm install && cd ../telegram-bot && npm install",
+    "build:all": "npm run build && cd server && npm install --production && cd ../telegram-bot && npm install --production",
+    "start:prod": "concurrently \"npm start\" \"cd server && npm start\" \"cd telegram-bot && npm start\"",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "pm2:restart": "pm2 restart ecosystem.config.js",
+    "pm2:delete": "pm2 delete ecosystem.config.js"
   },
   "dependencies": {
     "clsx": "^2.0.0",
