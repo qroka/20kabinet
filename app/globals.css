@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--font-inter);
+  }
+  
+  .font-mono {
+    font-family: var(--font-roboto-mono);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-accent-orange text-white rounded-lg hover:bg-accent-orange-hover transition-colors font-medium;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-primary-charcoal text-text-white rounded-lg hover:bg-primary-charcoal/80 transition-colors font-medium;
+  }
+  
+  .input-field {
+    @apply px-4 py-2 bg-primary-dark-gray border border-primary-charcoal rounded-lg text-text-white placeholder-gray-400 focus:border-accent-orange focus:outline-none transition-colors;
+  }
+  
+  .card {
+    @apply bg-primary-dark-gray border border-primary-charcoal rounded-lg hover:border-accent-orange transition-colors;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2D2D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B35;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2D2D2D #1A1A1A;
+}
+
+/* Custom scrollbar for logs */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-accent-orange::-webkit-scrollbar-thumb {
+  background-color: #FF6B35;
+  border-radius: 4px;
+}
+
+.scrollbar-track-primary-charcoal::-webkit-scrollbar-track {
+  background-color: #2D2D2D;
+  border-radius: 4px;
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}

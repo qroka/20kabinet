@@ -1,0 +1,29 @@
+{
+  "name": "computer-lab-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for computer lab authorization",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "computer-lab",
+    "authorization"
+  ],
+  "author": "Computer Lab System",
+  "license": "MIT"
+}
+
+
+
+

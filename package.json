@@ -1,0 +1,49 @@
+{
+  "name": "computer-lab-system",
+  "version": "1.0.0",
+  "description": "Система отслеживания компьютерного класса с Telegram авторизацией",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "cd server && npm run dev",
+    "telegram": "cd telegram-bot && npm run dev",
+    "dev:all": "concurrently \"npm run dev\" \"npm run server\" \"npm run telegram\"",
+    "install:all": "npm install && cd server && npm install && cd ../telegram-bot && npm install"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.294.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "socket.io-client": "^4.7.4",
+    "tailwind-merge": "^2.0.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.2.0"
+  },
+  "keywords": [
+    "computer-lab",
+    "tracking-system",
+    "telegram-bot",
+    "nextjs",
+    "websocket",
+    "real-time"
+  ],
+  "author": "Computer Lab System",
+  "license": "MIT"
+}
